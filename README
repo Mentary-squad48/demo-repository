@@ -2,7 +2,7 @@
 
 1. **Branch principal de trabalho:** A branch `develop` reflete o estado atual de desenvolvimento. Nenhuma alteração deve ser enviada diretamente para a `main`.
 2. **Criação de branches:** Cada nova funcionalidade, tarefa ou correção deve ser iniciada a partir da branch `develop`.
-3. **Nomenclatura:** Utilize o padrão `feature/issue-XX-descricao` (ex: `feature/issue-7-regras-pull-request`).
+3. **Nomenclatura:** Utilize o padrão `feature/usXX-descricao` (ex: `feature/us07-regras-pull-request`).
 4. **Desenvolvimento e Commits:** Realize as alterações e commits na sua branch de funcionalidade.
 5. **Pull Request para Develop:** Ao finalizar, abra um Pull Request apontando a sua branch de funcionalidade para a branch `develop`.
 6. **Integração na Main:** Quando o código na `develop` estiver testado, verificado e pronto para publicação/entrega, será feito um Pull Request da `develop` para a `main`.
