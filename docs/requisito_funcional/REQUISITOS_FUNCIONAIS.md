@@ -117,3 +117,95 @@ O sistema deverá bloquear a liberação do simulado em caso de inconsistências
 | **RF010.1** | O sistema deverá bloquear a publicação do simulado caso identifique itens sem gabarito ou desequilíbrios críticos, exibindo lista de pendências para ajuste. |
 | **RF010.2** | A interface deverá permitir o retorno ao fluxo de edição para correção dos apontamentos emitidos. |
 | **RF010.3** | Inexistindo pendências impeditivas, o sistema deverá persistir a avaliação montada no banco de dados e torná-la disponível para aplicação física ou digital. |
+
+## 4. Módulo de Inteligência Avaliativa
+
+### RF011: Captura e Processamento de Telemetria
+O sistema (Motor IA / OCR) deverá atuar de forma autônoma para processar os dados originados da aplicação do simulado e atualizar a base de dados de Inteligência Avaliativa.
+
+| Código | Requisito de Sistema |
+| :---: | :--- |
+| **RF011.1** | O sistema deverá capturar automaticamente os dados de respostas registrados na aplicação do simulado, seja em formato físico (via leitura/OCR do cartão-resposta) ou digital. |
+| **RF011.2** | O Motor IA/OCR deverá processar os dados capturados, calculando métricas de desempenho (acertos, erros, percentuais por habilidade e por descritor). |
+| **RF011.3** | O sistema deverá atualizar a base de dados de Inteligência Avaliativa com os resultados processados, sem necessidade de intervenção manual. |
+
+---
+
+### RF012: Renderização de Dashboards
+O sistema deverá disponibilizar interfaces visuais de Inteligência Avaliativa para que professores, coordenadores e gestores possam acessar e acompanhar as métricas calculadas.
+
+| Código | Requisito de Sistema |
+| :---: | :--- |
+| **RF012.1** | O sistema deverá disponibilizar dashboard com métricas de Inteligência Avaliativa segmentadas conforme o perfil de acesso do usuário (professor, coordenador ou gestor). |
+| **RF012.2** | O dashboard deverá exibir indicadores de desempenho geral, evolução histórica e distribuição de resultados por habilidade e descritor. |
+| **RF012.3** | O sistema deverá manter as métricas exibidas atualizadas conforme o último processamento da base de dados. |
+
+---
+
+### RF013: Visão Comparativa Avançada
+O sistema deverá fornecer uma funcionalidade sob demanda, restrita ao perfil de Gestor de Rede de Ensino, para alterar a visão padrão do dashboard e comparar o desempenho de escolas individualmente.
+
+| Código | Requisito de Sistema |
+| :---: | :--- |
+| **RF013.1** | O sistema deverá restringir o acesso à funcionalidade de visão comparativa ao perfil "Gestor de Rede de Ensino", validando a permissão antes de exibir a opção. |
+| **RF013.2** | A interface deverá permitir a seleção de duas ou mais escolas para comparação lado a lado dos indicadores de desempenho. |
+| **RF013.3** | O sistema deverá permitir a alternância entre a visão padrão do dashboard e a visão comparativa, a qualquer momento e sob demanda do gestor. |
+
+---
+
+## 5. Módulo de Relatórios Curriculares
+
+### RF014: Processamento de Relatórios Curriculares
+O sistema deverá receber requisições de professores, coordenadores ou gestores para gerar análises de desempenho.
+
+| Código | Requisito de Sistema |
+| :---: | :--- |
+| **RF014.1** | O sistema deverá disponibilizar funcionalidade de solicitação de relatório de desempenho para os perfis de professor, coordenador e gestor. |
+| **RF014.2** | O sistema deverá validar os parâmetros informados na requisição (turma, componente curricular e período) antes de iniciar o processamento. |
+| **RF014.3** | O sistema deverá enfileirar a requisição para processamento e notificar o usuário sobre o status da geração do relatório. |
+
+---
+
+### RF015: Exibição de Dados Curriculares
+Ao receber a solicitação, o sistema deverá processar os dados e exibir obrigatoriamente o relatório detalhado, segmentado por Descritor e Habilidade (BNCC).
+
+| Código | Requisito de Sistema |
+| :---: | :--- |
+| **RF015.1** | O sistema deverá processar os dados vinculados à requisição e consolidar o relatório de desempenho. |
+| **RF015.2** | O relatório gerado deverá segmentar obrigatoriamente os resultados por Descritor e por Habilidade (BNCC). |
+| **RF015.3** | O sistema deverá exibir o relatório em formato visual, permitindo sua exportação e/ou impressão. |
+
+---
+
+## 6. Módulo de Recomposição da Aprendizagem
+
+### RF016: Elaboração Estratégica via IA
+O sistema, apoiado pelo Motor IA / OCR, deverá ser capaz de processar os resultados e elaborar uma proposta de Plano de Recomposição da Aprendizagem.
+
+| Código | Requisito de Sistema |
+| :---: | :--- |
+| **RF016.1** | O Motor IA/OCR deverá analisar os resultados de desempenho segmentados por habilidade e descritor. |
+| **RF016.2** | O sistema deverá elaborar, com apoio da IA, uma proposta de Plano de Recomposição da Aprendizagem, priorizando as lacunas de aprendizagem identificadas. |
+| **RF016.3** | O sistema deverá disponibilizar a proposta gerada para a etapa de auditoria humana. |
+
+---
+
+### RF017: Interface de Auditoria Humana
+O sistema deverá exibir o plano elaborado pela IA em uma interface de revisão, garantindo que o professor assuma o papel de auditar e validar a estratégia antes da aprovação.
+
+| Código | Requisito de Sistema |
+| :---: | :--- |
+| **RF017.1** | O sistema deverá exibir o plano elaborado pela IA em interface dedicada de revisão pedagógica. |
+| **RF017.2** | A interface deverá permitir que o professor edite, aprove ou rejeite os elementos do plano proposto. |
+| **RF017.3** | O sistema deverá registrar a decisão do professor (aprovação ou rejeição), vinculando-a ao seu identificador e à data/hora da ação. |
+
+---
+
+### RF018: Recálculo de Solução Pedagógica
+O sistema deverá permitir que o professor recuse o plano inicial e acione uma rota alternativa, solicitando que a IA gere uma nova solução de recomposição antes da aprovação final.
+
+| Código | Requisito de Sistema |
+| :---: | :--- |
+| **RF018.1** | O sistema deverá permitir que o professor recuse o plano inicial apresentado, indicando o motivo da recusa. |
+| **RF018.2** | Ao receber a recusa, o sistema deverá acionar rota alternativa solicitando à IA a geração de uma nova proposta de plano de recomposição. |
+| **RF018.3** | O sistema deverá repetir o ciclo de auditoria humana até que o plano seja aprovado pelo professor. |
