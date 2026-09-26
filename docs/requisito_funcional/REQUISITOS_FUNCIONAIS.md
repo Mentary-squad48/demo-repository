@@ -118,6 +118,8 @@ O sistema deverá bloquear a liberação do simulado em caso de inconsistências
 | **RF010.2** | A interface deverá permitir o retorno ao fluxo de edição para correção dos apontamentos emitidos. |
 | **RF010.3** | Inexistindo pendências impeditivas, o sistema deverá persistir a avaliação montada no banco de dados e torná-la disponível para aplicação física ou digital. |
 
+---
+
 ## 4. Módulo de Inteligência Avaliativa
 
 ### RF011: Captura e Processamento de Telemetria
